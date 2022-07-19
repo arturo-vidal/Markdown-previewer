@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import marked from 'react';
+import { marked } from 'marked';
 
 const initialState=`
 Paragraph
@@ -46,14 +46,14 @@ class App extends React.Component{
     const markdown= marked(text, {brakes: true});
     return(
     <div className="text-center">
-      <h1>Markdown Previewer</h1>
+      <h1 id="title">Markdown Previewer</h1>
       <div className="row">
         <div className="col-md-6">
-          <h3>Enter markdown</h3>
+          <h3>Enter markdown :</h3>
           <textarea id="editor" value={text} onChange={this.handleChange}></textarea>
         </div>
         <div id="previewdiv" className="col-md-6">
-          <h3>Output</h3>
+          <h3>Output :</h3>
           <div id="preview" dangerouslySetInnerHTML={{__html: markdown}}></div>
         </div>
       </div>

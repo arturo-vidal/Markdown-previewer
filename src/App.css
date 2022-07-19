@@ -5,6 +5,8 @@
   min-height: 400px;
   min-width: 500px;
   border: 5px solid black;
+  box-shadow: 10px 10px #63b679;
+  margin-bottom: 30px;
 }
 #previewdiv{
   display: flex;
@@ -12,7 +14,10 @@
   justify-content: center;
   align-items: center;
 }
-textarea, #preview{
+textarea, #preview, #preview *{
   background-color: #74d68e;
+}
+#title, h3{
+  margin: 30px;
 }
 
